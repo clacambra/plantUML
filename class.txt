@@ -1,0 +1,14 @@
+@startuml
+MetadataExtensionBlock <|-- RouteReportingMEB
+
+class RouteReportingMEB {
+-m_routeInformation : std::string
++RouteReporting(nodeId : std::string, arrivalTime : time_t, departureTime : time_t)
++RouteReporting(rawData std::string)
++getRouteInformation() : std::string
++addRouteInformation(nodeId : std::sting, arrivalTime : time_t, departureTime : time_t) : void
+}
+note right
+m_metadataType is 0x04
+end note
+@enduml
