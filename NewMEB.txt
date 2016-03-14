@@ -1,0 +1,20 @@
+@startuml
+
+class NewMEB {
+	-m_codeLength : uint16_t
+	-m_code: std::string
+	-m_data: std::string
+	+NewMEB(code : std::string, data : std::string)
+	+NewMEB(rawData : std::string)
+	+~NewMEB()
+	+initFromRaw(data : std::string)
+	+getCodeLength() : uint16_t
+	+getCode() : std::string
+	+getData() : std::string
+	
+}
+note right: m_metadataType is 0x05
+
+MetaDataExtensionBlock <|-- NewMEB
+@enduml
+
