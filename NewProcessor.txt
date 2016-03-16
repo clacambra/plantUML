@@ -1,0 +1,12 @@
+@startuml
+class NewProcessor {
+	+m_header1 : std::string
+	+m_parameters1 : json
+	+m_worker1 : Worker
+	+NewProcessor()
+	+~NewProcessor()
+	+checkForward(bundleContainer : BundleContainer) : std::vector<std::string>
+	
+}
+BasicBundleProcessor <|-- NewProcessor
+@enduml
