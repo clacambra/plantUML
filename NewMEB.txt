@@ -7,7 +7,7 @@ class CodeDataCarrierMEB {
 	+CodeDataCarrierMEB(code : std::string, data : std::string)
 	+CodeDataCarrierMEB(rawData : std::string)
 	+~CodeDataCarrierMEB()
-	+toRaw()
+	+toRaw() : std::string
 	+initFromRaw(data : std::string)
 	+getCodeLength() : uint16_t
 	+getCode() : std::string
