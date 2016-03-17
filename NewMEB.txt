@@ -1,6 +1,6 @@
 @startuml
 
-class NewMEB {
+class CodeDataCarrierMEB {
 	-m_codeLength : uint16_t
 	-m_code: std::string
 	-m_data: std::string
