@@ -1,20 +1,21 @@
 @startuml
 
-class NewMEB {
+class CodeDataCarrierMEB {
 	-m_codeLength : uint16_t
 	-m_code: std::string
-	-m_data: std::string
-	+NewMEB(code : std::string, data : std::string)
-	+NewMEB(rawData : std::string)
-	+~NewMEB()
+	-m_data: json
+	+CodeDataCarrierMEB(code : std::string, data : std::string)
+	+CodeDataCarrierMEB(rawData : std::string)
+	+~CodeDataCarrierMEB()
 	+initFromRaw(data : std::string)
 	+getCodeLength() : uint16_t
 	+getCode() : std::string
-	+getData() : std::string
+	+getData() : json
+	+setData(std::string)
 	
 }
 note right: m_metadataType is 0x05
 
-MetaDataExtensionBlock <|-- NewMEB
+MetaDataExtensionBlock <|-- CodeDataCarrierMEB
 @enduml
 
